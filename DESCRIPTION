@@ -2,13 +2,13 @@ Package: PPTreereg
 Title: Projection Pursuit Regression Tree 
 Description: Projection pursuit regression tree using LDA,
     Lr or PDA projection pursuit index.
-Version: 1.0.2
+Version: 1.0.3
 Author: Eun-Kyung Lee 
 Maintainer: Eun-Kyung Lee <lee.eunk@gmail.com>
-Date: 2019-11-04
+Date: 2020-06-27
 Depends: R (>= 3.2)
 Imports: MASS (>= 3.1-20),gridExtra,ggplot2,grid,PPtreeViz,
          ggExtra,dplyr,tidyr,tibble
 License: GPL (>= 2)
 Encoding: UTF-8
-RoxygenNote: 7.0.2
+RoxygenNote: 7.1.0

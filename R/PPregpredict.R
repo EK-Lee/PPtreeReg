@@ -110,6 +110,8 @@ predict.PPtreereg<-function(object,newdata=NULL,Rule=1,final.rule=1,
    n<-nrow(test.data)
    class.temp<-rep(1, n)
    test.class.index<-NULL
+
+
    temp<-PP.Class.index(class.temp,test.class.index,test.data,
                         Tree.result$Tree.Struct,Tree.result$projbest.node,
                         Tree.result$splitCutoff.node,1,Rule)
@@ -125,7 +127,7 @@ predict.PPtreereg<-function(object,newdata=NULL,Rule=1,final.rule=1,
    } else{      
       gt<-table(temp$test.class)
       predict.Y<-rep(0,length(temp$test.class))
-      for(i in 1:length(gt)){
+      for(i in as.numeric(names(gt))){
          sel.id<-which(temp$test.class==i)
          proj.data<-as.matrix(cbind(rep(1,nrow(test.data)),test.data))%*%
            matrix(PPtreeregOBJ$coef.G[[final.rule]][i,])
@@ -142,4 +144,3 @@ predict.PPtreereg<-function(object,newdata=NULL,Rule=1,final.rule=1,
       return(predict.Y)     
    }
 }
-
