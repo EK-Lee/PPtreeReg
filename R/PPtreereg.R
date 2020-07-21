@@ -460,6 +460,6 @@ PPTreereg<-function(formula,data,DEPTH=NULL,Rr=1,PPmethod="LDA",
                     origY=origY,
                     cut.class=Tree.final$cut.class.keep,
                     origX.mean=origX.mean,origX.sd=origX.sd,formula=formula)
-   class(regtreeobj)<-append(class(regtreeobj),"PPtreereg") 
+   class(regtreeobj)<-"PPtreereg"
    return(regtreeobj)
 }
